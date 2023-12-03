@@ -59,5 +59,15 @@ namespace sehiriciulasimsistemi.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Görsel_2023_12_03_saat_23_48_33_71acbaa2 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Görsel 2023-12-03 saat 23.48.33_71acbaa2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -11,5 +11,26 @@ namespace sehiriciulasimsistemi
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminGiris fr = new AdminGiris();
+            fr.Show();
+            // this.Hide();//ilk formu kapatmak için kullandýk
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SoforGiris fr = new SoforGiris();
+            fr.Show();
+            // this.Hide();//ilk formu kapatmak için kullandýk
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            YolcuGiris fr = new YolcuGiris();
+            fr.Show();
+            //  this.Hide();//ilk formu kapatmak için kullandýk
+        }
     }
 }
