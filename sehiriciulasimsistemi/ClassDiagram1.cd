@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="sehiriciulasimsistemi.yolcutarifesi">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAgACAgA=</HashCode>
+      <FileName>yolcutarifesi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sehiriciulasimsistemi.YasliVatandasTarifesi">
+    <Position X="9" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>YasliVatandasTarifesi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sehiriciulasimsistemi.tambilet">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>tambilet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sehiriciulasimsistemi.OgrenciTarifesi">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>OgrenciTarifesi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sehiriciulasimsistemi.EngelliBireyTarifesi">
+    <Position X="6.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>EngelliBireyTarifesi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sehiriciulasimsistemi.AnneKartTarifesi">
+    <Position X="4.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>AnneKartTarifesi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

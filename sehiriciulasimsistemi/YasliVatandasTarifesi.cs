@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace sehiriciulasimsistemi
 {
-    public class YasliVatandasTarifesi:yolcutarifesi
+    public class YasliVatandasTarifesi : yolcutarifesi
     {
+        public override int mesafe { get; set; }
         public double fiyat(double ucret)
         {
             return ucret = 00;
             Console.WriteLine(ucret);
-            Console.WriteLine("65 Yaş üstü ücretsiz vatandaş");
+            Console.WriteLine("65 Yaş Üstü Kart");
         }
     }
 }

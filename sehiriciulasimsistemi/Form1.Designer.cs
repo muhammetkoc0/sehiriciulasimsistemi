@@ -55,7 +55,7 @@
             // button1
             // 
             button1.BackColor = Color.Transparent;
-            button1.Location = new Point(53, 79);
+            button1.Location = new Point(53, 83);
             button1.Name = "button1";
             button1.Size = new Size(195, 57);
             button1.TabIndex = 1;

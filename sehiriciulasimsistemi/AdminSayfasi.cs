@@ -10,18 +10,23 @@ using System.Windows.Forms;
 
 namespace sehiriciulasimsistemi
 {
-    public partial class AdminGiris : Form
+    public partial class AdminSayfasi : Form
     {
-        public AdminGiris()
+        public AdminSayfasi()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
-            AdminSayfasi fr = new AdminSayfasi();
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Soforİslemleri fr = new Soforİslemleri();
             fr.Show();
-            //this.Hide();//ilk formu kapatmak için kullandık
+            // this.Hide();//ilk formu kapatmak için kullandık
         }
     }
 }
