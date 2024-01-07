@@ -28,5 +28,26 @@ namespace sehiriciulasimsistemi
             fr.Show();
             // this.Hide();//ilk formu kapatmak için kullandık
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Guzergahİşlemleri fr = new Guzergahİşlemleri();
+            fr.Show();
+            // this.Hide();//ilk formu kapatmak için kullandık
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Yolcuİşlemleri fr = new Yolcuİşlemleri();
+            fr.Show();
+            // this.Hide();//ilk formu kapatmak için kullandık
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Aracİşlemleri fr = new Aracİşlemleri();
+            fr.Show();
+            // this.Hide();//ilk formu kapatmak için kullandık
+        }
     }
 }

@@ -44,20 +44,22 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(255, 255, 128);
-            label1.Font = new Font("Harlow Solid Italic", 40.2F, FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(199, 44);
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Harlow Solid Italic", 60F, FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(424, 39);
             label1.Name = "label1";
-            label1.Size = new Size(685, 85);
+            label1.Size = new Size(1022, 126);
             label1.TabIndex = 0;
             label1.Text = "Şehiriçi Ulaşım Sistemi";
+            label1.Click += label1_Click;
             // 
             // button1
             // 
-            button1.BackColor = Color.Transparent;
-            button1.Location = new Point(53, 83);
+            button1.BackColor = Color.FromArgb(255, 255, 128);
+            button1.Font = new Font("Corbel", 30F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(118, 170);
             button1.Name = "button1";
-            button1.Size = new Size(195, 57);
+            button1.Size = new Size(287, 78);
             button1.TabIndex = 1;
             button1.Text = "Admin Giriş";
             button1.UseVisualStyleBackColor = false;
@@ -69,20 +71,20 @@
             groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(button1);
-            groupBox1.Font = new Font("Corbel", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox1.Location = new Point(400, 213);
+            groupBox1.Font = new Font("Corbel", 30F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox1.Location = new Point(717, 283);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(306, 345);
+            groupBox1.Size = new Size(526, 606);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Giriş Paneli";
             // 
             // button3
             // 
-            button3.BackColor = Color.White;
-            button3.Location = new Point(53, 243);
+            button3.BackColor = Color.FromArgb(255, 255, 128);
+            button3.Location = new Point(118, 417);
             button3.Name = "button3";
-            button3.Size = new Size(195, 53);
+            button3.Size = new Size(287, 78);
             button3.TabIndex = 3;
             button3.Text = "Yolcu Giriş";
             button3.UseVisualStyleBackColor = false;
@@ -90,10 +92,10 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.White;
-            button2.Location = new Point(53, 161);
+            button2.BackColor = Color.FromArgb(255, 255, 128);
+            button2.Location = new Point(118, 292);
             button2.Name = "button2";
-            button2.Size = new Size(195, 54);
+            button2.Size = new Size(287, 78);
             button2.TabIndex = 2;
             button2.Text = "Şoför Giriş";
             button2.UseVisualStyleBackColor = false;
@@ -102,9 +104,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(906, 26);
+            pictureBox1.Location = new Point(62, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(159, 121);
+            pictureBox1.Size = new Size(219, 200);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
@@ -112,9 +114,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(12, 26);
+            pictureBox2.Location = new Point(1560, -19);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(159, 121);
+            pictureBox2.Size = new Size(289, 231);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
@@ -123,8 +125,8 @@
             // 
             AutoScaleDimensions = new SizeF(12F, 27F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Cyan;
-            ClientSize = new Size(1150, 701);
+            BackColor = Color.White;
+            ClientSize = new Size(1784, 932);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(groupBox1);

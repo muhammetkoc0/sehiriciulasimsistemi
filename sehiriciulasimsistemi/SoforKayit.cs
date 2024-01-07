@@ -14,20 +14,24 @@ namespace sehiriciulasimsistemi
         string _soyisim;
         int _yas;
         DateTime _tarih;
+        bool _sigorta;
         
         public int id { get { return _id; } set { _id = value; } }
         public string isim { get { return _isim; } set { _isim = value; } }
         public string soyisim { get { return _soyisim; } set { _soyisim = value; } }
 
-       public DateTime tarih { get { return _tarih; } set { _tarih = value; } }
+        public DateTime tarih { get { return _tarih; } set { _tarih = value; } }
 
         public int yas { get { return _yas; } set { _yas = value; } }
 
-        public int kayitDuzenle(int id, int yas, string isim, string soyisim, DateTime tarih)
+        public bool Sigorta { get { return _sigorta; } set { _sigorta = value; } }
+
+     
+
+        public int kayitDuzenle(int id, int yas, string isim, string soyisim, DateTime tarih, bool Sigorta)
         {
             Console.WriteLine("Kayıt Düzenlendi");
             return 1;
-
         }
 
         public int kayitSil(int id)
@@ -36,13 +40,11 @@ namespace sehiriciulasimsistemi
             return 1;
         }
 
-        public int yeniKayit(int id, int yas, string isim, string soyisim, DateTime tarih)
+        public int yeniKayit(int id, int yas, string isim, string soyisim, DateTime tarih, bool Sigorta)
         {
-
 
             Console.WriteLine("Kayıt Eklendi");
             return 1;
         }
-    
     }
 }

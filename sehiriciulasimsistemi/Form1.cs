@@ -32,5 +32,10 @@ namespace sehiriciulasimsistemi
             fr.Show();
             //  this.Hide();//ilk formu kapatmak için kullandýk
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -7,20 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace sehiriciulasimsistemi
 {
-    public partial class YolcuGiris : Form
+    public partial class Yolcuİşlemleri : Form
     {
-        List<YolcuKayit> Yolcular = new List<YolcuKayit>();
-        public YolcuGiris()
+        BindingList<YolcuKayit> Yolcular = new BindingList<YolcuKayit>();
+        public Yolcuİşlemleri()
         {
             InitializeComponent();
         }
 
-        private void YolcuGiris_Load(object sender, EventArgs e)
+        private void Yolcuİşlemleri_Load(object sender, EventArgs e)
         {
-           
 
             YolcuKayit yolcu1 = new YolcuKayit { Id = 48101, Ad = "Muhammet ", Soyad = "Koç", DogumTarihi = DateTime.Now, Erkek = true, Kadın = false, Kategori = "Öğrenci" };
             YolcuKayit yolcu2 = new YolcuKayit { Id = 48102, Ad = "Yasemin ", Soyad = "Alaca", DogumTarihi = DateTime.Now, Kadın = true, Erkek = false, Kategori = "Anne" };
@@ -60,68 +60,73 @@ namespace sehiriciulasimsistemi
             Yolcular.Add(yolcu17);
             Yolcular.Add(yolcu18);
 
-
+            dataGridView1.DataSource = Yolcular;
 
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(textBox4.Text, out int girilenId))
+            int Id = Convert.ToInt32(textid.Text);
+            string Ad = textad.Text;
+            string Soyad = textsoyad.Text;
+            DateTime dateTime = dtTime.Value;
+            bool Erkek = checkBox1.Checked;
+            bool Kadın = checkBox2.Checked;
+            string Kategori = comboBox1.Text;
+
+            YolcuKayit yolcu = new YolcuKayit { Id = Id, Ad = Ad, Soyad = Soyad, DogumTarihi = dateTime, Erkek = Erkek, Kadın = Kadın, Kategori = Kategori };
+            Yolcular.Add(yolcu);
+        }
+
+        private void dataGridViev1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                YolcuKayit yolcu = Yolcular.FirstOrDefault(y => y.Id == girilenId);
-
-                if (yolcu != null)
-                {
-                    string kategori = yolcu.Kategori;
-                    double tarife = 0.0; 
-                    switch (kategori)
-                    {
-                        case "Öğrenci":
-                            tarife = 6.0;
-                            break;
-                        case "Anne":
-                            tarife = 10.0;
-                            break;
-                        case "Tam":
-                            tarife = 18.0;
-                            break;
-                        case "Engelli":
-                            tarife = 0.0;
-                            break;
-                        case "Yaşlı":
-                            tarife = 0.0;
-                            break;
-                        case "Kamu Görevlisi":
-                            tarife = 12.0;
-                            break;
-                      
-                        default:
-                            tarife = 20.0;
-                            break;
-                    }
-
-                    labtarife.Text = $" {kategori} ";
-                    labucret.Text = $" {tarife} TL";
-                    labad.Text = $" {yolcu.Ad} {yolcu.Soyad}"; 
-                
+                YolcuKayit yolcu = (YolcuKayit)dataGridView1.SelectedRows[0].DataBoundItem;
+                textid.Text = yolcu.Id.ToString();
+                textad.Text = yolcu.Ad;
+                textsoyad.Text = yolcu.Soyad;
+                dtTime.Value = yolcu.DogumTarihi;
+                checkBox1.Checked = yolcu.Erkek;
+                checkBox2.Checked = yolcu.Kadın;
+                comboBox1.Text = yolcu.Kategori;
             }
-                else
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                YolcuKayit yolcu = (YolcuKayit)dataGridView1.SelectedRows[0].DataBoundItem;
+
+                yolcu.Ad = textad.Text;
+                yolcu.Soyad = textsoyad.Text;
+                yolcu.Id = Convert.ToInt32(textid.Text);
+                yolcu.DogumTarihi = dtTime.Value;
+                yolcu.Erkek = checkBox1.Checked;
+                yolcu.Kadın = checkBox2.Checked;
+                yolcu.Kategori = comboBox1.Text;
+                dataGridView1.Refresh();
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                YolcuKayit yolcu = (YolcuKayit)dataGridView1.SelectedRows[0].DataBoundItem;
+
+                DialogResult result = MessageBox.Show(yolcu.Ad+ yolcu.Soyad + " Silinsin mi?", " Yolcu Silinsin mi?", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (result == DialogResult.Yes)
                 {
-                    labhata.Text = "Girilen ID'ye ait yolcu kaydı bulunamadı.";
-                    labucret.Text = "";
-                    labtarife.Text = "";
-                    labad.Text = "";
+                    Yolcular.Remove(yolcu);
+
+                    dataGridView1.Refresh();
                 }
             }
-            else
-            {
-                labtarife.Text = "";
-                labad.Text = "";
-                labucret.Text = "";
-                labhata.Text = "Geçersiz ID formatı." ;
-            }
+
         }
     }
-    
-
 }

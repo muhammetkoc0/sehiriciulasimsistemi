@@ -9,15 +9,12 @@ namespace sehiriciulasimsistemi
      public interface Interface1
     {
         int id { get; set; }
-        string isim {  get; set; }
-        string soyisim { get; set; }
-        int yas { get; set; }
-
-        DateTime tarih {  get; set; }
+        string isim {  get; set; }     
+        bool Sigorta { get; set; }
        
 
-        int yeniKayit(int id, int yas, string isim, string soyisim, DateTime tarih);
-        int kayitDuzenle(int id, int yas, string isim, string soyisim, DateTime tarih);
+        int yeniKayit(int id, int yas, string isim, string soyisim, DateTime tarih, bool Sigorta );
+        int kayitDuzenle(int id, int yas, string isim, string soyisim, DateTime tarih, bool Sigorta);
         int kayitSil(int id);
     }
 }
