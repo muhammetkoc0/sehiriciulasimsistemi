@@ -6,6 +6,23 @@ using System.Threading.Tasks;
 
 namespace sehiriciulasimsistemi
 {
+    internal class AdminIslemleri
+    {
+    }
+    public class GuzergahKayit
+    {
+        string id;
+        string Ad;
+        string ilkDurak;
+        string sonDurak;
+
+        public string GuzergahKodu { get { return id; } set { id = value; } }
+        public string GuzergahAdı { get { return Ad; } set { Ad = value; } }
+        public string Ilkdurak { get { return ilkDurak; } set { ilkDurak = value; } }
+        public string SonDurak { get { return sonDurak; } set { sonDurak = value; } }
+
+
+    }
     public class AracKayit
     {
         string plaka;
